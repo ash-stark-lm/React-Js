@@ -21,6 +21,23 @@ function App() {
       setCounter(20)
     }
   }
+  /**
+   if we do 
+   const addValue=()=>{
+    setCounter(counter + 1)
+    setCounter(counter + 1)
+    setCounter(counter + 1)
+    setCounter(counter + 1)
+    } it will still update the counter by 1 only as state takes in form of batches
+
+    so if we wanna really do it
+    const addValue=()=>{
+    setCounter(prevCounter => prevCounter + 1)
+    setCounter(prevCounter => prevCounter + 1)
+    setCounter(prevCounter => prevCounter + 1)
+    setCounter(prevCounter => prevCounter + 1)
+    }
+   */
 
   const removeValue = () => {
     //counter = counter - 1 //if use let
